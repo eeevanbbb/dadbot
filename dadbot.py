@@ -6,7 +6,7 @@ r = praw.Reddit('Dadbot 1.0 by u/feelinbotbotbot '
 r.login()
 
 subredditString = raw_input('Subreddit: ')
-howMany = raw_input('Top how many comments: ')
+howMany = raw_input('Top how many posts: ')
 subreddit = r.get_subreddit(subredditString)
 for submission in subreddit.get_hot(limit=int(howMany)):
 	flat_comments = praw.helpers.flatten_tree(submission.comments)
